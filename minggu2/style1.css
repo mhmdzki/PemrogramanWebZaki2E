@@ -1,0 +1,100 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0; /* Warna latar belakang sedikit lebih lembut */
+    line-height: 1.65;
+    padding-bottom: 100px;
+}
+
+.container-satu {
+    width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 20px; /* Tambahkan sedikit spasi antar item flex */
+    border-radius: 10px; /* Sedikit radius untuk tampilan lebih modern */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Tambahkan sedikit bayangan */
+}
+
+/* Styling untuk logo */
+.logo {
+    flex: 1;
+    order: 0; /* Ubah order menjadi 0 agar logo tampil sebelum sidebar 1 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e3f2fd; /* Latar belakang biru muda yang lembut */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.logo h1 {
+    color: #1976d2; /* Warna teks logo biru tua */
+    font-size: 24px;
+    margin-right: 10px; /* Jarak antara teks dan logo */
+}
+
+.logo img {
+    width: 100px; /* Ukuran logo diperbesar sedikit */
+    height: auto;
+    border-radius: 10px; /* Membuat logo berbentuk persegi dengan sudut tumpul */
+}
+
+.kolom-utama {
+    flex: 2;
+    order: 2;
+    background-color: #fff3e0; /* Warna latar belakang oranye pucat */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar-satu, .sidebar-dua {
+    flex: 0.5;
+    background-color: #bbdefb; /* Warna latar belakang sidebar biru muda */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar-satu {
+    order: 1; /* Sidebar 1 setelah logo */
+}
+
+.sidebar-dua {
+    order: 3;
+    padding-left: 20px;
+}
+
+/* Styling untuk tautan di sidebar */
+.sidebar-satu a {
+    text-decoration: none;
+    color: #0d47a1; /* Warna teks link biru gelap */
+    display: block;
+    margin-bottom: 10px; /* Spasi antar link */
+    padding: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.sidebar-satu a:hover {
+    color: #e65100; /* Warna saat hover menjadi oranye gelap */
+    background-color: #e3f2fd; /* Latar belakang saat hover menjadi biru muda */
+}
+
+/* Responsivitas sederhana untuk layar kecil */
+@media (max-width: 900px) {
+    .container-satu {
+        flex-direction: column; /* Tumpuk kolom vertikal di layar kecil */
+        width: 100%;
+    }
+
+    .kolom-utama, .sidebar-satu, .sidebar-dua {
+        flex: 1;
+        margin-bottom: 20px;
+    }
+}
