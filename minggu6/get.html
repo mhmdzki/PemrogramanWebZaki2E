@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="jquery-3.7.1.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#button1").click(function(){
+                    alert($("#test1").text());
+                });
+                $("#button2").click(function(){
+                    alert($("#test2").html());
+                });
+                $("#button3").click(function(){
+                    alert($("#test3").val());
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p id="test1">this is the first paragraf</p>
+        <p id="test2">this is <b>another</b> paragraf</p>
+
+        <p>your name: <input type="text" id="test3"></p>
+
+        <button id="button1">get  text</button>
+        <button id="button2">get html</button>
+        <button id="button3">get value</button>
+    </body>
+</html>
